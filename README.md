@@ -1,1 +1,0 @@
-# Loan-Pre-Payment-Calculator
