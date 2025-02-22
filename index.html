@@ -73,15 +73,19 @@
             let lumpSumFields = document.getElementById("lumpSumFields");
             let monthlyCheckbox = document.getElementById("monthlyCheckbox");
             let lumpSumCheckbox = document.getElementById("lumpSumCheckbox");
-            
+            let extraPaymentInput = document.getElementById("extraPayment");
+            let lumpSumInput = document.getElementById("lumpSum");
+
             if (mode === 'monthly') {
                 monthlyFields.classList.toggle("hidden");
-                lumpSumCheckbox.checked = false;
                 lumpSumFields.classList.add("hidden");
+                lumpSumCheckbox.checked = false;
+                lumpSumInput.value = ""; // Clear lump sum input when monthly pay is selected
             } else {
                 lumpSumFields.classList.toggle("hidden");
-                monthlyCheckbox.checked = false;
                 monthlyFields.classList.add("hidden");
+                monthlyCheckbox.checked = false;
+                extraPaymentInput.value = ""; // Clear extra monthly payment when lump sum is selected
             }
         }
 
